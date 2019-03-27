@@ -5,7 +5,7 @@ from os.path import join
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse, Http404
 
-from .models import BlogPost
+from css3two_blog.models import BlogPost
 
 exclude_posts = ("about", "projects", "talks")
 

@@ -3,18 +3,23 @@ import os
 import platform
 
 node = platform.node()
-dev_machines = ('dell-PC', 'laike9m.local',)
+dev_machines = ('myshop')
 
 if node in dev_machines:
     # folder My_Blog
     My_Blog = os.path.dirname(os.path.dirname(__file__))
+    # My_Blog = os.path.dirname(__file__)
     # project dir, contains static and media folder under DEV environment
     PROJECT_DIR = os.path.dirname(My_Blog)
     DEBUG = True
     DATABASES = {
         'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(My_Blog, 'db.sqlite3'),
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'myblog',
+            'USER': 'admin',
+            'PASSWORD': 'PwdMy0blog@dmin',
+            'HOST': 'localhost',
+            'PORT': 3306, 
         }
     }
     STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')

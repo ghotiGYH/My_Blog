@@ -6,7 +6,8 @@ from django.utils import timezone
 
 # for slug, get_absolute_url
 from django.template.defaultfilters import slugify
-from django.core.urlresolvers import reverse
+# from django.core.urlresolvers import reverse
+from django.urls import reverse
 
 # delete md_file before delete/change model
 from django.db.models.signals import pre_delete
@@ -16,6 +17,8 @@ from django.core.files.base import ContentFile
 import markdown2
 from unidecode import unidecode
 from taggit.managers import TaggableManager
+
+# import css3two_blog.views as cv
 
 upload_dir = 'content/BlogPost/%s/%s'
 
@@ -94,7 +97,7 @@ class BlogPost(models.Model):
             return f.read()
 
     def get_absolute_url(self):
-        return reverse('css3two_blog.views.blogpost',
+        return reverse('view_blogpost',
                        kwargs={'slug': self.slug, 'post_id': self.id})
 
 
