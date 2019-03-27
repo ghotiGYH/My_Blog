@@ -180,7 +180,7 @@ LOGGING = {
 
 import platform
 pc = platform.node()
-if pc != 'myshop':
+if pc != 'myshop' and pc != 'GuoY-PC':
     EMAIL_USE_TLS = True
     EMAIL_HOST = 'smtp.mailgun.org'
     EMAIL_PORT = 587
