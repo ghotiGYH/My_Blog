@@ -26,6 +26,9 @@ upload_dir = 'content/BlogPost/%s/%s'
 class BlogPostCategory(models.Model):
     category = models.CharField(max_length=30)
 
+    def __str__(self):
+        return self.category
+
 class BlogPost(models.Model):
     class Meta:
         # ordered by pub_date descending when retriving

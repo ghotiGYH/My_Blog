@@ -38,7 +38,7 @@ def archive(request):
 
     def get_sorted_posts(category):
         posts_by_year = defaultdict(list)
-        posts_of_a_category = blogposts.filter(category=category)  # already sorted by pub_date
+        posts_of_a_category = blogposts.filter(category__category=category)  # already sorted by pub_date
         for post in posts_of_a_category:
             year = post.pub_date.year
             posts_by_year[year].append(post)  # {'2013':post_list, '2014':post_list}
@@ -46,9 +46,10 @@ def archive(request):
         return posts_by_year
 
     args['data'] = [
-        ('programming', get_sorted_posts(category="programming")),
-        ('acg', get_sorted_posts(category="acg")),
-        ('nc', get_sorted_posts(category="nc")),  # no category
+        ('test', get_sorted_posts(category="test")),
+        # ('programming', get_sorted_posts(category="programming")),
+        # ('acg', get_sorted_posts(category="acg")),
+        # ('nc', get_sorted_posts(category="nc")),  # no category
     ]
 
     return render(request, 'css3two_blog/archive.html', args)
