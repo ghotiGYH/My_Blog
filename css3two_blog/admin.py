@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import BlogPost, BlogPostImage
+from .models import BlogPost, BlogPostImage, BlogPostCategory
 
 from django.forms import TextInput, Textarea
 from django.db import models
@@ -16,7 +16,6 @@ class BlogPostImageInline(admin.TabularInline):
     model = BlogPostImage
     extra = 3
 
-
 class BlogPostAdminForm(forms.ModelForm):
     class Meta:
         model = BlogPost
@@ -26,6 +25,9 @@ class BlogPostAdminForm(forms.ModelForm):
         }
         exclude = ('html_file',)
 
+
+class BlogPostCategoryAdmin(admin.ModelAdmin):
+    fields = ('category',)
 
 class BlogPostAdmin(admin.ModelAdmin):
 
@@ -66,3 +68,4 @@ class BlogPostAdmin(admin.ModelAdmin):
 
 
 admin.site.register(BlogPost, BlogPostAdmin)
+admin.site.register(BlogPostCategory, BlogPostCategoryAdmin)

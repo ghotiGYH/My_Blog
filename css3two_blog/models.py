@@ -23,6 +23,9 @@ from taggit.managers import TaggableManager
 upload_dir = 'content/BlogPost/%s/%s'
 
 
+class BlogPostCategory(models.Model):
+    category = models.CharField(max_length=30)
+
 class BlogPost(models.Model):
     class Meta:
         # ordered by pub_date descending when retriving
@@ -44,11 +47,11 @@ class BlogPost(models.Model):
         upload_to = upload_dir % (year, filename)
         return upload_to
 
-    CATEGORY_CHOICES = (
-        ('programming', 'Programming'),
-        ('acg', 'Anime & Manga & Novel & Game'),
-        ('nc', 'No Category'),
-    )
+    # CATEGORY_CHOICES = (
+    #     ('programming', 'Programming'),
+    #     ('acg', 'Anime & Manga & Novel & Game'),
+    #     ('nc', 'No Category'),
+    # )
 
     title = models.CharField(max_length=150)
     body = models.TextField(blank=True)
@@ -59,7 +62,8 @@ class BlogPost(models.Model):
     slug = models.SlugField(max_length=200, blank=True)
     # generated html file
     html_file = models.FileField(upload_to=get_html_name, blank=True)
-    category = models.CharField(max_length=30, choices=CATEGORY_CHOICES)
+    # category = models.CharField(max_length=30, choices=CATEGORY_CHOICES)
+    category = models.ForeignKey(BlogPostCategory, related_name='blogposts')
     description = models.TextField(blank=True)
     tags = TaggableManager()
 
@@ -118,3 +122,4 @@ class BlogPostImage(models.Model):
 
     blogpost = models.ForeignKey(BlogPost, related_name='images')
     image = models.ImageField(upload_to=get_upload_img_name)
+
