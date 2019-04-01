@@ -45,6 +45,7 @@ USE_TZ = True
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/var/www/example.com/media/"
 MEDIA_ROOT = choose_settings.MEDIA_ROOT
+print(MEDIA_ROOT)
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -62,7 +63,7 @@ STATIC_ROOT = choose_settings.STATIC_ROOT
 STATIC_URL = choose_settings.STATIC_URL
 
 # Additional locations of static files
-# STATICFILES_DIRS = choose_settings.STATICFILES_DIRS
+STATICFILES_DIRS = choose_settings.STATICFILES_DIRS
 # Put strings here, like "/home/html/static" or "C:/www/django/static".
 # Always use forward slashes, even on Windows.
 # Don't forget to use absolute paths, not relative paths.
@@ -76,7 +77,7 @@ STATICFILES_FINDERS = (
 )
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = 'v2x^#lrv$(xp3ost97tbr4wvodd6l6obm_f3s%a^6pdmpxhw=g'
+SECRET_KEY = 'mn-dpt25e-kqfx7z65rds3+f#_*au5esdfe%_z+t*jp4#h2e_p'
 
 # List of callables that know how to import templates from various sources.
 # TEMPLATE_LOADERS = (
@@ -180,7 +181,7 @@ LOGGING = {
 
 import platform
 pc = platform.node()
-if pc != 'myshop' and pc != 'GuoY-PC':
+if pc != 'RAINBOWSTONE' and pc != 'GuoY-PC':
     EMAIL_USE_TLS = True
     EMAIL_HOST = 'smtp.mailgun.org'
     EMAIL_PORT = 587

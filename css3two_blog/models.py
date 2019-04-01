@@ -66,7 +66,7 @@ class BlogPost(models.Model):
     # generated html file
     html_file = models.FileField(upload_to=get_html_name, blank=True)
     # category = models.CharField(max_length=30, choices=CATEGORY_CHOICES)
-    category = models.ForeignKey(BlogPostCategory, related_name='blogposts')
+    category = models.ForeignKey(BlogPostCategory, related_name='blogposts', null=True)
     description = models.TextField(blank=True)
     tags = TaggableManager()
 

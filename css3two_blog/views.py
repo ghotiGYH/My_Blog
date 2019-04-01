@@ -5,7 +5,7 @@ from os.path import join
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse, Http404
 
-from css3two_blog.models import BlogPost
+from css3two_blog.models import BlogPost, BlogPostCategory
 
 exclude_posts = ("about", "projects", "talks")
 
@@ -45,12 +45,16 @@ def archive(request):
         posts_by_year = sorted(posts_by_year.items(), reverse=True)  # [('2014',post_list), ('2013',post_list)]
         return posts_by_year
 
-    args['data'] = [
-        ('test', get_sorted_posts(category="test")),
+    args['data'] = list()
+    categorylist = BlogPostCategory.objects.all()
+    for item in categorylist:
+        args['data'].append((item.category, get_sorted_posts(category=item)))
+    # args['data'] = [
+    # ('test', get_sorted_posts(category="test")),
         # ('programming', get_sorted_posts(category="programming")),
         # ('acg', get_sorted_posts(category="acg")),
         # ('nc', get_sorted_posts(category="nc")),  # no category
-    ]
+    # ]
 
     return render(request, 'css3two_blog/archive.html', args)
 

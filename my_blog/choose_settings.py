@@ -3,7 +3,8 @@ import os
 import platform
 
 node = platform.node()
-dev_machines = ('myshop')
+# dev_machines = ('RAINBOWSTONE')
+dev_machines = ('GUOY-PC')
 
 if node in dev_machines:
     # folder My_Blog
@@ -23,6 +24,7 @@ if node in dev_machines:
         }
     }
     STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+    STATICFILES_DIRS = []
     STATIC_URL = '/static/'
     MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media')
     MEDIA_URL = '/media/'
@@ -32,44 +34,48 @@ else:
     DEBUG = False
     DATABASES = {
         'default': {
-            'ENGINE': 'django.db.backends.postgresql_psycopg2',
-            'NAME': 'database1',
-            'USER': 'laike9m',
-            'PASSWORD': os.environ["DJANGO_DB_PASSWORD"],
-            'HOST': '',
-            'PORT': '',
+            'ENGINE': 'django.db.backends.mysql',
+            'NAME': 'myblog',
+            'USER': 'admin',
+            'PASSWORD': 'PwdMy0blog@dmin',
+            'HOST': 'localhost',
+            'PORT': 3306,
         }
     }
-    PROJECT_DIR = '/home/laike9m/Envs/blog/My_Blog/'
-    MEDIA_ROOT = '/home/laike9m/media/'
+    PROJECT_DIR = '/blog/My_Blog/'
+    # MEDIA_ROOT = '/blog/media/'
+    MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media')
     MEDIA_URL = '/media/'
-    STATIC_ROOT = '/home/laike9m/static/'
+    # STATIC_ROOT = '/blog/static/'
+    STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
     STATIC_URL = '/static/'
 
-    STATICFILES_DIRS = (
-        os.path.join(PROJECT_DIR, 'static'),
-    )
+    STATICFILES_DIRS = [
+        ('css3two_blog', os.path.join(STATIC_ROOT, 'css3two_blog')),
+        ('admin', os.path.join(STATIC_ROOT, 'admin')),
+    ]
 
     TEMPLATE_DIRS = (
         os.path.join(PROJECT_DIR, 'templates'),
     )
 
     ALLOWED_HOSTS = [
-        '.laike9m.com',
+        '*',
+        #        'www.rainbowstone.com',
     ]
 
     # cache entire site
-    MIDDLEWARE_CLASSES_ADDITION_FIRST = (
-        'django.middleware.cache.UpdateCacheMiddleware',
-    )
+#    MIDDLEWARE_CLASSES_ADDITION_FIRST = (
+#        'django.middleware.cache.UpdateCacheMiddleware',
+#    )
 
-    MIDDLEWARE_CLASSES_ADDITION_LAST = (
-        'django.middleware.cache.FetchFromCacheMiddleware',
-    )
+#    MIDDLEWARE_CLASSES_ADDITION_LAST = (
+#        'django.middleware.cache.FetchFromCacheMiddleware',
+#    )
 
-    CACHES = {
-        'default': {
-            'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
-            'LOCATION': '127.0.0.1:11211',
-        }
-    }
+#    CACHES = {
+#        'default': {
+#            'BACKEND': 'django.core.cache.backends.memcached.MemcachedCache',
+#            'LOCATION': '127.0.0.1:11211',
+#        }
+#    }
