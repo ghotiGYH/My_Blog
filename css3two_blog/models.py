@@ -32,7 +32,8 @@ class BlogPostCategory(models.Model):
 class BlogPost(models.Model):
     class Meta:
         # ordered by pub_date descending when retriving
-        ordering = ['-pub_date']
+        # ordering = ['-pub_date']
+        ordering = ['id']
 
     def get_upload_md_name(self, filename):
         if self.pub_date:
