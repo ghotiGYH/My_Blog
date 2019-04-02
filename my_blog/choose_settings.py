@@ -6,9 +6,12 @@ node = platform.node()
 # dev_machines = ('RAINBOWSTONE')
 dev_machines = ('GUOY-PC')
 
-if node in dev_machines:
+# folder My_Blog
+My_Blog = os.path.dirname(os.path.dirname(__file__))
+
+if node in dev_machines or 'dev' in My_Blog:
     # folder My_Blog
-    My_Blog = os.path.dirname(os.path.dirname(__file__))
+    # My_Blog = os.path.dirname(os.path.dirname(__file__))
     # My_Blog = os.path.dirname(__file__)
     # project dir, contains static and media folder under DEV environment
     PROJECT_DIR = os.path.dirname(My_Blog)
@@ -16,17 +19,17 @@ if node in dev_machines:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'myblog',
+            'NAME': 'myblog_dev',
             'USER': 'admin',
             'PASSWORD': 'PwdMy0blog@dmin',
             'HOST': 'localhost',
             'PORT': 3306, 
         }
     }
-    STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+    STATIC_ROOT = os.path.join(My_Blog, 'static')
     STATICFILES_DIRS = []
     STATIC_URL = '/static/'
-    MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media')
+    MEDIA_ROOT = os.path.join(My_Blog, 'media')
     MEDIA_URL = '/media/'
     TEMPLATE_DIRS = [os.path.join(My_Blog, 'templates')]
     ALLOWED_HOSTS = ['*']
@@ -42,7 +45,7 @@ else:
             'PORT': 3306,
         }
     }
-    PROJECT_DIR = '/blog/My_Blog/'
+    PROJECT_DIR = '/blog/'
     # MEDIA_ROOT = '/blog/media/'
     MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media')
     MEDIA_URL = '/media/'
@@ -50,10 +53,11 @@ else:
     STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
     STATIC_URL = '/static/'
 
-    STATICFILES_DIRS = [
-        ('css3two_blog', os.path.join(STATIC_ROOT, 'css3two_blog')),
-        ('admin', os.path.join(STATIC_ROOT, 'admin')),
-    ]
+    STATICFILES_DIRS = []
+    # STATICFILES_DIRS = [
+    #     ('css3two_blog', os.path.join(STATIC_ROOT, 'css3two_blog')),
+    #     ('admin', os.path.join(STATIC_ROOT, 'admin')),
+    # ]
 
     TEMPLATE_DIRS = (
         os.path.join(PROJECT_DIR, 'templates'),

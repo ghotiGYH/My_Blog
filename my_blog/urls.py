@@ -19,12 +19,13 @@ urlpatterns = [
                   # admin
                   url(r'^admin/', include(admin.site.urls)),
                   url(r'^referral/', mv.referral),
-              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT, name='media')
+]
+# + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT, name='media')
 
-if not settings.DEBUG:
+if settings.DEBUG:
     urlpatterns += [
         url(r'^static/(?P<path>.*)$', serve, {'document_root': settings.STATIC_ROOT}, name='static'),
-        # url(r'^meidia/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}, name='media'),
+        url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}, name='media'),
     ]
 
 handler404 = 'my_blog.views.handler404'
