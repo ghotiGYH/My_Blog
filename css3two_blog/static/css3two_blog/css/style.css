@@ -278,7 +278,7 @@ nav {
 
 .content_container {
     background: #f8f8f8;
-    margin-right: 295px;
+    /*margin-right: 295px;*/
     padding-top: 1em;
     display: block;
     position: relative;

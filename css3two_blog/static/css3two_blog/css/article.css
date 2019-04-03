@@ -12,6 +12,8 @@ article {
     grid-gap: 10px;
     /* 设置每列的尺寸 */
     grid-template-columns: repeat(4, 1fr);
+    grid-auto-flow: row;
+    align-items: stretch;
 }
 
 article header {
