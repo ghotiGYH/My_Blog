@@ -3,11 +3,11 @@
 <html>
 <head>
     {% block head %}
-        <title>rainbowstone</title>
+        <title>RainbowStone</title>
         <meta name="description" content="rainbowstone">
     {% endblock head %}
     <link rel="shortcut icon" type="image/x-icon"
-          href="{% static 'css3two_blog/images/favicon2.ico' %}"/>
+          href="{% static 'css3two_blog/images/favicon.ico' %}"/>
     <meta name="keywords" content="website keywords, website keywords"/>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
     <link href="https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400&
@@ -30,42 +30,31 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css3two_blog/css/gfm.css' %}"/>
     <link rel="stylesheet" type="text/css" href="{% static 'css3two_blog/css/hybrid.css' %}">
     {% block pagecss %}{% endblock pagecss %}
-    {#    <script>#}
-    {#        // Google Analytics#}
-    {#        window.ga = window.ga || function () {#}
-    {#            (ga.q = ga.q || []).push(arguments)#}
-    {#        };#}
-    {#        ga.l = +new Date;#}
-    {#        ga('create', 'UA-69544114-1', 'auto');#}
-    {#        ga('send', 'pageview');#}
-    {#    </script>#}
-    {#    <script async src='//www.google-analytics.com/analytics.js'></script>#}
 </head>
 
 <body>
 <div id="main" style="position: relative;">
-    {#  <a href="https://github.com/laike9m">#}
-    {#    <img style="position: absolute; top: 0; right: 0; border: 0;"#}
-    {#         src="{% static 'css3two_blog/images/forkme.png' %}"#}
-    {#         alt="Fork me on GitHub">#}
-    {#  </a>#}
     <header>
         <div id="logo">
             <div id="logo_text">
-                <h1><a href="/blog"><span class="logo_colour">rainbowstone</span></a>
+                <img src="{% static 'css3two_blog/images/rs_logo.png' %}">
+                <h1><a href="/blog"><span class="logo_colour">RainbowStone</span></a>
                 </h1>
-                {#        <h2>Yuri Is Justice</h2>#}
+                <h2>Welcome to RainbowStone Parocord Crafting World. Wish you a pleasant journey deploring this fun and
+                    creative world. You can find step-by-step DIY video instructions for friendship bracelets, survival
+                    bracelets, Christmas decorations, Halloween themed items, and a lot more are coming. This website is
+                    continuously updated with our new paracord projects.</h2>
             </div>
         </div>
         <nav>
             <div id="menu_container">
+                <h3>Looking for more paracords and DIY accessories? Visit our <a
+                        href="https://www.amazon.co.uk/s?me=A4RACEOGDMXID&marketplaceID=A1F83G8C2ARO7P">Amazon store</a>.
+                </h3>
                 <ul class="sf-menu" id="nav">
                     <li><a href="/blog">Home</a></li>
                     <li><a href="/blog/archive">Archives</a></li>
                     <li><a href="/admin">Admin</a></li>
-                    {#          <li><a href="/blog/about">About site&me</a></li>#}
-                    {#          <li><a href="/blog/projects">Projects</a></li>#}
-                    {#          <li><a href="/blog/talks">Talks</a></li>#}
                 </ul>
             </div>
         </nav>
@@ -74,7 +63,7 @@
     <div id="site_content">
 
         <div class="content_container">
-{#            <span class="toggle-sidebar"></span>#}
+            {#            <span class="toggle-sidebar"></span>#}
             <div class="content">
                 {% block content %}
                     Need to be filled by each page.
@@ -85,153 +74,153 @@
         </div>
 
 
-{#        <aside id="sidebar_container">#}
-{#            <div class="sidebar">#}
-{#                <div class="bio" data-twttr-id="twttr-sandbox-0">#}
-                    {#          <div class="illustration">#}
-                    {#            <img src="/static/css3two_blog/images/thumbnail.png" alt="laike9m">#}
-                    {#            <h2 id="hi" style="font-size: 28px">Hi, I'm laike9m</h2>#}
-                    {#          </div>#}
-{#                    <div class="clear"></div>#}
-                    {#          <p>#}
-                    {#            Software Engineer at Google Shanghai#}
-                    {#            <br>Free Software developer#}
-                    {#            <br>Crazy Atlético Madrid fan#}
-                    {#            <br>I code in Python, C++, JavaScript/Node.js#}
-                    {#          </p>#}
-{#                    <!-- StackExchange User Flair http://stackoverflow.com/users/flair -->#}
-                    {#          <a href="http://stackoverflow.com/users/2142577/laike9m"#}
-                    {#             target="_blank">#}
-                    {#            <img src="https://stackoverflow.com/users/flair/2142577.png"#}
-                    {#                 width="208" height="58"#}
-                    {#                 alt="profile for laike9m on Stack Exchange, a network of free, community-driven Q&amp;A sites"#}
-                    {#                 title="profile for laike9m on Stack Exchange, a network of free, community-driven Q&amp;A sites">#}
-                    {#          </a>#}
-                    {#          <div class="zhihu-card" data-description="no" data-userhash="laike9m" data-button="no" data-width="208px"#}
-                    {#               data-theme="github" data-suffix=" @知乎"></div>#}
-                    {#          <script src="https://laike9m.github.io/zhihu-card/dist/widget.js"></script>#}
-                    {#          <div id="social-logos">#}
-                    {#            <a href="mailto:laike9m@gmail.com" target="_blank">#}
-                    {#              <img src="{% static 'css3two_blog/images/webicon-mail-m.png' %}"#}
-                    {#                   alt="E-mail">#}
-                    {#            </a>#}
-                    {#            <a href="http://laike9m.com/blog/rss" title="my feed"#}
-                    {#               target="_blank">#}
-                    {#              <img src="{% static 'css3two_blog/images/webicon-rss-m.png' %}"#}
-                    {#                   alt="RSS feed">#}
-                    {#            </a>#}
-                    {#            <a href="https://github.com/laike9m" title="laike9m on GitHub"#}
-                    {#               target="_blank">#}
-                    {#              <img src="{% static 'css3two_blog/images/webicon-github-m.png' %}"#}
-                    {#                   alt="GitHub logo">#}
-                    {#            </a>#}
-                    {#            <a href="http://stackoverflow.com/users/2142577/laike9m"#}
-                    {#               title="laike9m on stackoverflow" target="_blank">#}
-                    {#              <img src="{% static 'css3two_blog/images/webicon-stackoverflow-m.png' %}"#}
-                    {#                   alt="GitHub logo">#}
-                    {#            </a>#}
-                    {#            <a href="https://twitter.com/laike9m" title="laike9m on Twitter"#}
-                    {#               target="_blank">#}
-                    {#              <img src="{% static 'css3two_blog/images/webicon-twitter-m.png' %}"#}
-                    {#                   alt="Twitter logo">#}
-                    {#            </a>#}
-                    {#            <a href="https://plus.google.com/u/0/+Yaolaike9mZuo/posts"#}
-                    {#               title="laike9m on Google+" target="_blank">#}
-                    {#              <img src="{% static 'css3two_blog/images/webicon-googleplus-m.png' %}"#}
-                    {#                   alt="Google+ logo">#}
-                    {#            </a>#}
-                    {#            <a href="http://bangumi.tv/user/laike9m" title="laike9m on Bangumi"#}
-                    {#               target="_blank">#}
-                    {#              <img src="{% static 'css3two_blog/images/webicon-bangumi-m.png' %}"#}
-                    {#                   alt="Bangumi logo">#}
-                    {#            </a>#}
-                    {#          </div>#}
-{#                    <div id="introduction">#}
-{#                        <h2 id="hi" style="font-size: 28px">Introduction</h2>#}
-{#                    </div>#}
-{#                    <br/>#}
-                    {#          <div id="blogroll" style="font-family: AlegreyaSansBold;">#}
-                    {#            <h2 style="font-size:18px; color: #333333">Blogroll</h2>#}
-                    {#            <p>#}
-                    {#              <a href="http://blog.binux.me" target="_blank" class="blogroll">Binuxの杂货铺</a>#}
-                    {#            </p>#}
-                    {#            <p>#}
-                    {#              <a href="https://blog.lilydjwg.me" target="_blank"#}
-                    {#                 class="blogroll">依云's Blog</a>#}
-                    {#            </p>#}
-                    {#            <p>#}
-                    {#              <a href="http://zhangxiaoyang.me" target="_blank"#}
-                    {#                 class="blogroll">zhangxiaoyang.me</a>#}
-                    {#            </p>#}
-                    {#            <p>#}
-                    {#              <a href="http://tianjun.me" target="_blank" class="blogroll">Tian#}
-                    {#                Jun</a>#}
-                    {#            </p>#}
-                    {#            <p>#}
-                    {#              <a href="http://bambooom.github.io" target="_blank"#}
-                    {#                 class="blogroll">Bambooom</a>#}
-                    {#            </p>#}
-                    {#            <p>#}
-                    {#              <a href="https://www.pluvet.com" target="_blank"#}
-                    {#                 class="blogroll">pluvet</a>#}
-                    {#            </p>#}
-                    {#            <p>#}
-                    {#              <a href="https://www.kawabangga.com" target="_blank"#}
-                    {#                 class="blogroll">卡瓦邦噶！</a>#}
-                    {#            </p>#}
-                    {#            <p>#}
-                    {#              <a href="https://changchen.me" target="_blank"#}
-                    {#                 class="blogroll">daya0576's Blog</a>#}
-                    {#            </p>#}
-                    {#            <p>#}
-                    {#              <a href="http://blog.chyroc.cn/" target="_blank"#}
-                    {#                 class="blogroll">Chyroc的博客</a>#}
-                    {#            </p>#}
-                    {#            <p>#}
-                    {#              <a href="http://woodenrobot.me/" target="_blank"#}
-                    {#                 class="blogroll">woodenrobot</a>#}
-                    {#            </p>#}
-                    {#            <p>#}
-                    {#              <a href="http://www.zlovezl.cn/" target="_blank"#}
-                    {#                 class="blogroll">Piglei</a>#}
-                    {#            </p>#}
-                    {#            <p>#}
-                    {#              <a href="http://yonghaowu.github.io/" target="_blank"#}
-                    {#                 class="blogroll">YongHao Hu</a>#}
-                    {#            </p>#}
-                    {#            <p>#}
-                    {#              <a href="http://www.codcodog.me/" target="_blank"#}
-                    {#                 class="blogroll">Codcodog's Notes</a>#}
-                    {#            </p>#}
-                    {#            <p>#}
-                    {#              <a href="https://manjusaka.itscoder.com/" target="_blank"#}
-                    {#                 class="blogroll">Manjusaka</a>#}
-                    {#            </p> #}
-                    {#            <p>#}
-                    {#              <a href="https://github.com/shidenggui/blog/issues" target="_blank"#}
-                    {#                 class="blogroll">Shidenggui's blog</a>#}
-                    {#            </p>#}
-                    {#            <p>#}
-                    {#              <a href="https://www.vimiix.com" target="_blank"#}
-                    {#                 class="blogroll">Vimiix's blog</a>#}
-                    {#            </p>#}
-                    {#            <p>#}
-                    {#              <a href="https://flandre-scarlet.moe/blog/" target="_blank"#}
-                    {#                 class="blogroll">Re: Memory</a>#}
-                    {#            </p>#}
-                    {#            <p>#}
-                    {#              <a href="https://vim.ink/" target="_blank"#}
-                    {#                 class="blogroll">vim教程网</a>#}
-                    {#            </p>#}
-                    {#          </div>#}
-                    {#          <p>#}
-                    {#            <a style="font-style: normal" target="_blank" href="https://m.do.co/c/a582fa751343">#}
-                    {#              注册 DigitalOcean 领 $10 代金券</a>#}
-                    {#          </p>#}
-{#                </div>#}
-{#                <!-- end about me -->#}
-{#            </div>#}
-{#        </aside>#}
+        {#        <aside id="sidebar_container">#}
+        {#            <div class="sidebar">#}
+        {#                <div class="bio" data-twttr-id="twttr-sandbox-0">#}
+        {#          <div class="illustration">#}
+        {#            <img src="/static/css3two_blog/images/thumbnail.png" alt="laike9m">#}
+        {#            <h2 id="hi" style="font-size: 28px">Hi, I'm laike9m</h2>#}
+        {#          </div>#}
+        {#                    <div class="clear"></div>#}
+        {#          <p>#}
+        {#            Software Engineer at Google Shanghai#}
+        {#            <br>Free Software developer#}
+        {#            <br>Crazy Atlético Madrid fan#}
+        {#            <br>I code in Python, C++, JavaScript/Node.js#}
+        {#          </p>#}
+        {#                    <!-- StackExchange User Flair http://stackoverflow.com/users/flair -->#}
+        {#          <a href="http://stackoverflow.com/users/2142577/laike9m"#}
+        {#             target="_blank">#}
+        {#            <img src="https://stackoverflow.com/users/flair/2142577.png"#}
+        {#                 width="208" height="58"#}
+        {#                 alt="profile for laike9m on Stack Exchange, a network of free, community-driven Q&amp;A sites"#}
+        {#                 title="profile for laike9m on Stack Exchange, a network of free, community-driven Q&amp;A sites">#}
+        {#          </a>#}
+        {#          <div class="zhihu-card" data-description="no" data-userhash="laike9m" data-button="no" data-width="208px"#}
+        {#               data-theme="github" data-suffix=" @知乎"></div>#}
+        {#          <script src="https://laike9m.github.io/zhihu-card/dist/widget.js"></script>#}
+        {#          <div id="social-logos">#}
+        {#            <a href="mailto:laike9m@gmail.com" target="_blank">#}
+        {#              <img src="{% static 'css3two_blog/images/webicon-mail-m.png' %}"#}
+        {#                   alt="E-mail">#}
+        {#            </a>#}
+        {#            <a href="http://laike9m.com/blog/rss" title="my feed"#}
+        {#               target="_blank">#}
+        {#              <img src="{% static 'css3two_blog/images/webicon-rss-m.png' %}"#}
+        {#                   alt="RSS feed">#}
+        {#            </a>#}
+        {#            <a href="https://github.com/laike9m" title="laike9m on GitHub"#}
+        {#               target="_blank">#}
+        {#              <img src="{% static 'css3two_blog/images/webicon-github-m.png' %}"#}
+        {#                   alt="GitHub logo">#}
+        {#            </a>#}
+        {#            <a href="http://stackoverflow.com/users/2142577/laike9m"#}
+        {#               title="laike9m on stackoverflow" target="_blank">#}
+        {#              <img src="{% static 'css3two_blog/images/webicon-stackoverflow-m.png' %}"#}
+        {#                   alt="GitHub logo">#}
+        {#            </a>#}
+        {#            <a href="https://twitter.com/laike9m" title="laike9m on Twitter"#}
+        {#               target="_blank">#}
+        {#              <img src="{% static 'css3two_blog/images/webicon-twitter-m.png' %}"#}
+        {#                   alt="Twitter logo">#}
+        {#            </a>#}
+        {#            <a href="https://plus.google.com/u/0/+Yaolaike9mZuo/posts"#}
+        {#               title="laike9m on Google+" target="_blank">#}
+        {#              <img src="{% static 'css3two_blog/images/webicon-googleplus-m.png' %}"#}
+        {#                   alt="Google+ logo">#}
+        {#            </a>#}
+        {#            <a href="http://bangumi.tv/user/laike9m" title="laike9m on Bangumi"#}
+        {#               target="_blank">#}
+        {#              <img src="{% static 'css3two_blog/images/webicon-bangumi-m.png' %}"#}
+        {#                   alt="Bangumi logo">#}
+        {#            </a>#}
+        {#          </div>#}
+        {#                    <div id="introduction">#}
+        {#                        <h2 id="hi" style="font-size: 28px">Introduction</h2>#}
+        {#                    </div>#}
+        {#                    <br/>#}
+        {#          <div id="blogroll" style="font-family: AlegreyaSansBold;">#}
+        {#            <h2 style="font-size:18px; color: #333333">Blogroll</h2>#}
+        {#            <p>#}
+        {#              <a href="http://blog.binux.me" target="_blank" class="blogroll">Binuxの杂货铺</a>#}
+        {#            </p>#}
+        {#            <p>#}
+        {#              <a href="https://blog.lilydjwg.me" target="_blank"#}
+        {#                 class="blogroll">依云's Blog</a>#}
+        {#            </p>#}
+        {#            <p>#}
+        {#              <a href="http://zhangxiaoyang.me" target="_blank"#}
+        {#                 class="blogroll">zhangxiaoyang.me</a>#}
+        {#            </p>#}
+        {#            <p>#}
+        {#              <a href="http://tianjun.me" target="_blank" class="blogroll">Tian#}
+        {#                Jun</a>#}
+        {#            </p>#}
+        {#            <p>#}
+        {#              <a href="http://bambooom.github.io" target="_blank"#}
+        {#                 class="blogroll">Bambooom</a>#}
+        {#            </p>#}
+        {#            <p>#}
+        {#              <a href="https://www.pluvet.com" target="_blank"#}
+        {#                 class="blogroll">pluvet</a>#}
+        {#            </p>#}
+        {#            <p>#}
+        {#              <a href="https://www.kawabangga.com" target="_blank"#}
+        {#                 class="blogroll">卡瓦邦噶！</a>#}
+        {#            </p>#}
+        {#            <p>#}
+        {#              <a href="https://changchen.me" target="_blank"#}
+        {#                 class="blogroll">daya0576's Blog</a>#}
+        {#            </p>#}
+        {#            <p>#}
+        {#              <a href="http://blog.chyroc.cn/" target="_blank"#}
+        {#                 class="blogroll">Chyroc的博客</a>#}
+        {#            </p>#}
+        {#            <p>#}
+        {#              <a href="http://woodenrobot.me/" target="_blank"#}
+        {#                 class="blogroll">woodenrobot</a>#}
+        {#            </p>#}
+        {#            <p>#}
+        {#              <a href="http://www.zlovezl.cn/" target="_blank"#}
+        {#                 class="blogroll">Piglei</a>#}
+        {#            </p>#}
+        {#            <p>#}
+        {#              <a href="http://yonghaowu.github.io/" target="_blank"#}
+        {#                 class="blogroll">YongHao Hu</a>#}
+        {#            </p>#}
+        {#            <p>#}
+        {#              <a href="http://www.codcodog.me/" target="_blank"#}
+        {#                 class="blogroll">Codcodog's Notes</a>#}
+        {#            </p>#}
+        {#            <p>#}
+        {#              <a href="https://manjusaka.itscoder.com/" target="_blank"#}
+        {#                 class="blogroll">Manjusaka</a>#}
+        {#            </p> #}
+        {#            <p>#}
+        {#              <a href="https://github.com/shidenggui/blog/issues" target="_blank"#}
+        {#                 class="blogroll">Shidenggui's blog</a>#}
+        {#            </p>#}
+        {#            <p>#}
+        {#              <a href="https://www.vimiix.com" target="_blank"#}
+        {#                 class="blogroll">Vimiix's blog</a>#}
+        {#            </p>#}
+        {#            <p>#}
+        {#              <a href="https://flandre-scarlet.moe/blog/" target="_blank"#}
+        {#                 class="blogroll">Re: Memory</a>#}
+        {#            </p>#}
+        {#            <p>#}
+        {#              <a href="https://vim.ink/" target="_blank"#}
+        {#                 class="blogroll">vim教程网</a>#}
+        {#            </p>#}
+        {#          </div>#}
+        {#          <p>#}
+        {#            <a style="font-style: normal" target="_blank" href="https://m.do.co/c/a582fa751343">#}
+        {#              注册 DigitalOcean 领 $10 代金券</a>#}
+        {#          </p>#}
+        {#                </div>#}
+        {#                <!-- end about me -->#}
+        {#            </div>#}
+        {#        </aside>#}
 
     </div>
 

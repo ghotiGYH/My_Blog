@@ -139,7 +139,7 @@ ol li {
 
 #main, #logo, #site_content, footer { 
   max-width: 1200px;
-  overflow: hidden;
+  overflow: visible;
   margin: 0px auto;
 }
 
@@ -150,7 +150,7 @@ body>div>header {
 }
 
 #logo {
-  width: 1000px;
+  width: 1190px;
   height: 200px;
   background: transparent url(../images/logo.png) no-repeat right;
   color: #888;
@@ -160,6 +160,11 @@ body>div>header {
 #logo #logo_text { 
   top: 5px;
   left: 0;
+}
+
+#logo img {
+    float: left;
+    width: 14%;
 }
 
 #logo h1, #logo h2 { 
@@ -176,7 +181,7 @@ body>div>header {
 }
 
 #logo_text h1 a .logo_colour { 
-  color: #09D4FF;
+  color: #ff0397;
 }
 
 #logo_text a:hover .logo_colour { 
@@ -186,7 +191,11 @@ body>div>header {
 #logo_text h2 { 
   font-size: 150%;
   padding: 0 0 0 0;
-  color: #A8AA94;
+  color: #09D4FF;
+}
+
+#logo_text p {
+  color: #0000c0;
 }
 
 nav { 
@@ -201,8 +210,13 @@ nav {
   margin: 0 auto 0 auto;
 }
 
+#menu_container h3 {
+    float: left;
+    color: #09D4FF;
+}
+
 #site_content {
-    background: #f0f0f0;
+    background: #09D4FF;
 }
 
 #sidebar_container {
