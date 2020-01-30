@@ -138,14 +138,14 @@ ol li {
 }
 
 #main, #logo, #site_content, footer { 
-  max-width: 1200px;
+  max-width: 100%;
   overflow: visible;
   margin: 0px auto;
 }
 
 body>div>header {
   background: #404040;
-  height: 200px;
+  height: 225px;
   border-bottom: 1px solid #FFF;
 }
 
@@ -199,7 +199,7 @@ body>div>header {
 }
 
 nav { 
-  height: 44px;
+  height: 33px;
   width: 100%;
   margin: -44px auto 0 auto;
   background: transparent url(../images/menubar.png) repeat;
@@ -211,6 +211,7 @@ nav {
 }
 
 #menu_container h3 {
+    margin: 7px auto 10px 34px;
     float: left;
     color: #09D4FF;
 }
