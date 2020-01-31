@@ -334,8 +334,8 @@ pre code, pre tt {
 
 article p:not(.meta) {
     font-size: 16px;
-    line-height: 180%;
-    margin: 17px 0 16px 0;
+    line-height: 0px;
+    margin: 0px 0 0px 0;
     padding: 0;
 }
 

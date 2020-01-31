@@ -4,17 +4,12 @@
 
 {% block content %}
     <div class="blog-index grid">
-        {% for blogpost in blogposts|slice:sl %}
+        {#        {% for blogpost in blogposts|slice:sl %}#}
+        {% for blogpost in blogposts %}
             {% autoescape off %}
                 <article class="item">
                     {{ blogpost.display_html }}
                     <header>
-{#                        <p class="meta">#}
-{#                            <time pubdate="{{ blogpost.pub_date }}" data-updated="{{ blogpost.last_edit_date }}">#}
-{#                                {{ blogpost.pub_date|date:'M'|upper }}#}
-{#                                {{ blogpost.pub_date|date:"dS"|upper|stripleadingzero }}, {{ blogpost.pub_date.year }}#}
-{#                            </time>#}
-{#                        </p>#}
                         <h1 class="title-link center">
                             <a href="{{ blogpost.get_absolute_url }}"><b>{{ blogpost.title }}</b></a>
                         </h1>
@@ -23,13 +18,13 @@
             {% endautoescape %}
         {% endfor %}
     </div>
-    <div class="pagination">
-        {% if newer_page %}
-            <a class="next" href="/{{ newer_page }}/">← Next</a>
-        {% endif %}
-        <a href="/blog/archive">Blog Archives</a>
-        {% if prev_page %}
-            <a class="prev" href="/{{ prev_page }}/">Prev →</a>
-        {% endif %}
-    </div>
+{#    <div class="pagination">#}
+{#        {% if newer_page %}#}
+{#            <a class="next" href="/{{ newer_page }}/">← Prev</a>#}
+{#        {% endif %}#}
+{#        <a href="/blog/archive">Blog Archives</a>#}
+{#        {% if prev_page %}#}
+{#            <a class="prev" href="/{{ prev_page }}/">Next →</a>#}
+{#        {% endif %}#}
+{#    </div>#}
 {% endblock content %}
